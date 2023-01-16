@@ -1,4 +1,5 @@
-import bot from "./assets/bot.svg";
+import bot from "./assets/ai.png";
+
 import user from "./assets/user.svg";
 
 const form = document.querySelector("form");
@@ -52,7 +53,6 @@ function chatStripe(isAi, value, uniqueId) {
         <div class="message" id=${uniqueId}>${value}</div> 
       </div>   
     </div>
-
     `;
 }
 

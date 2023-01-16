@@ -11,32 +11,86 @@ body {
   background: #343541;
 }
 
+/* #343541  #6f7182*/
 #app {
   width: 100vw;
   height: 100vh;
-  background: #343541;
-
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* justify-content: space-between; */
+}
+
+.container {
+  width: 50%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+
+/*background-color: #333; 
+} */
+
+img {
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 5%;
+  align-items: center;
+}
+
+img:hover {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.text_header {
+  margin-left: 3%;
+}
+
+.text_header h2 {
+  letter-spacing: 0.2rem;
+  background-image: linear-gradient(
+    -225deg,
+    #5a35e2 0%,
+    #c6a9e6 29%,
+    #ff1361 67%,
+    #fcf409 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 4s linear infinite;
+  display: inline-block;
+  font-size: 2rem;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }
 
 #chat_container {
-  flex: 1;
   width: 100%;
   height: 100%;
   overflow-y: scroll;
-
   display: flex;
   flex-direction: column;
-  gap: 10px;
-
+  gap: 5px;
   -ms-overflow-style: none;
   scrollbar-width: none;
 
   padding-bottom: 20px;
   scroll-behavior: smooth;
+  background: linear-gradient(#654ea3, #eaafc8);
+  /* border: solid 1px white; */
 }
 
 /* hides scrollbar */
@@ -51,13 +105,13 @@ body {
 
 .ai {
   background: #40414f;
+  border-radius: 5px;
 }
 
 .chat {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -67,17 +121,15 @@ body {
 .profile {
   width: 36px;
   height: 36px;
-  border-radius: 5px;
-
+  border-radius: 50px;
   background: #5436da;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .ai .profile {
-  background: #10a37f;
+  background: #2edefd;
 }
 
 .profile img {
@@ -88,10 +140,8 @@ body {
 
 .message {
   flex: 1;
-
-  color: #dcdcdc;
+  color: #ffffff;
   font-size: 20px;
-
   max-width: 100%;
   overflow-x: scroll;
 
@@ -118,7 +168,7 @@ form {
   margin: 0 auto;
   padding: 10px;
   background: #40414f;
-
+  border-radius: 10px;
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -126,12 +176,11 @@ form {
 
 textarea {
   width: 100%;
-
-  color: #fff;
+  height: auto;
+  color: rgb(0, 0, 0);
   font-size: 18px;
-
   padding: 10px;
-  background: transparent;
+  /* background: transparent; */
   border-radius: 5px;
   border: none;
   outline: none;
